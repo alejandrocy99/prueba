@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rigoberto - Mascot Interactive</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar-container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Rigoberto Logo" id="brand-logo">
+                <span>RIGOBERTO</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="glitch-text" data-text="Bienvenido a">Bienvenido a <br><span class="highlight">Rigoberto</span></h1>
+            <p>Donde la agilidad y el sigilo dominan la red.</p>
+            <button id="main-cta" class="cta-btn">Descubre Más</button>
+
+            <!-- Formulario Guardián de Prueba -->
+            <div id="guard-form" class="fake-form">
+                <h3>Contacto Rápido</h3>
+                <input type="text" id="dummy-name" class="dummy-input" placeholder="Tu Nombre" />
+                <input type="email" id="dummy-email" class="dummy-input" placeholder="Tu Email (Obligatorio)" />
+                <button id="dummy-submit" class="cta-btn" style="width: 100%;">Enviar Mensaje</button>
+            </div>
+        </div>
+        
+        <!-- Interactive Rat Area -->
+        <div id="rat-container">
+            <!-- El Nido (Fondo Oscuro) -->
+            <div id="rat-hole-bg" class="server-hole-bg"></div>
+
+            <div id="the-rat">
+                <!-- SVG Rat that runs around -->
+                <svg viewBox="0 0 100 140" class="cyber-rat">
+                    <!-- Tail (Black, wavy) -->
+                    <path class="rat-tail" d="M50,105 C50,150 90,140 90,110 C90,80 65,90 65,70" stroke="#000" stroke-width="6" fill="none" stroke-linecap="round"/>
+                    
+                    <!-- Back Left Leg -->
+                    <g class="rat-leg">
+                        <path d="M35,85 C25,95 20,95 15,85" fill="#6A0DAD" stroke="#000" stroke-width="2"/>
+                        <path d="M15,85 L10,80 M16,88 L10,92 M20,92 L15,100" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+                    </g>
+                    <!-- Back Right Leg -->
+                    <g class="rat-leg">
+                        <path d="M65,85 C75,95 80,95 85,85" fill="#6A0DAD" stroke="#000" stroke-width="2"/>
+                        <path d="M85,85 L90,80 M84,88 L90,92 M80,92 L85,100" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+                    </g>
+
+                    <!-- Front Left Leg -->
+                    <g class="rat-leg">
+                        <path d="M40,50 C30,40 25,45 20,35" fill="#6A0DAD" stroke="#000" stroke-width="2"/>
+                        <path d="M20,35 L15,30 M18,38 L12,38 M22,40 L18,48" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+                    </g>
+                    <!-- Front Right Leg -->
+                    <g class="rat-leg">
+                        <path d="M60,50 C70,40 75,45 80,35" fill="#6A0DAD" stroke="#000" stroke-width="2"/>
+                        <path d="M80,35 L85,30 M82,38 L88,38 M78,40 L82,48" stroke="#000" stroke-width="2" stroke-linecap="round"/>
+                    </g>
+
+                    <!-- Body -->
+                    <path d="M35,50 C20,70 25,100 40,110 C50,115 50,115 60,110 C75,100 80,70 65,50 C55,30 45,30 35,50 Z" fill="#6A0DAD" stroke="#000" stroke-width="2.5" stroke-linejoin="round"/>
+                    
+                    <!-- Head -->
+                    <path d="M40,40 C35,20 45,10 50,8 C55,10 65,20 60,40 Z" fill="#6A0DAD" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+                    
+                    <!-- Ears -->
+                    <path d="M40,35 C30,25 25,45 35,45 Z" fill="#6A0DAD" stroke="#000" stroke-width="2"/>
+                    <path d="M60,35 C70,25 75,45 65,45 Z" fill="#6A0DAD" stroke="#000" stroke-width="2"/>
+
+                    <!-- Whiskers -->
+                    <path d="M48,15 L30,10 M48,18 L28,20 M48,21 L32,28" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                    <path d="M52,15 L70,10 M52,18 L72,20 M52,21 L68,28" stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+                    <!-- Cyber Glasses (Cyan Visor) -->
+                    <path d="M36,32 C34,22 45,18 50,22 C55,18 66,22 64,32 C66,35 55,30 50,30 C45,30 34,35 36,32 Z" fill="#00FFFF" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            
+            <!-- El Nido (Rejilla Frontal sobre la rata) -->
+            <div id="rat-hole-fg" class="server-hole-fg"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
